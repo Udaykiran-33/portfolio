@@ -68,7 +68,7 @@ export function Experience() {
         ref={containerRef}
         className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden"
       >
-        <div className="mb-8 px-6 lg:pl-[max(1.5rem,calc((100vw-960px)/2))]">
+        <div className="mb-6 sm:mb-8 px-4 sm:px-6 lg:pl-[max(1.5rem,calc((100vw-960px)/2))]">
           <BlurFade delay={0} inView>
             <p className="text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
               Journey
@@ -79,26 +79,26 @@ export function Experience() {
         <motion.div
           ref={trackRef}
           style={{ x }}
-          className="flex gap-6 pl-6 pr-6 lg:pl-[max(1.5rem,calc((100vw-960px)/2))]"
+          className="flex gap-4 sm:gap-6 pl-4 pr-4 sm:pl-6 sm:pr-6 lg:pl-[max(1.5rem,calc((100vw-960px)/2))]"
         >
           {careers.map((c, i) => (
             <div
               key={c.company}
-              className={`living-card living-card-${i % 3} w-[360px] shrink-0 overflow-hidden bg-[var(--gray-2)] md:w-[400px]`}
+              className={`living-card living-card-${i % 3} w-[280px] sm:w-[320px] md:w-[400px] shrink-0 overflow-hidden bg-[var(--gray-2)]`}
             >
-              <div className="flex h-full flex-col gap-4 p-7">
+              <div className="flex h-full flex-col gap-3 sm:gap-4 p-5 sm:p-7">
                 <span className="font-mono text-[11px] text-[var(--gray-6)]">
                   {c.period}
                 </span>
                 <div>
-                  <h3 className="text-[18px] font-semibold tracking-[-0.01em] text-[var(--gray-12)]">
+                  <h3 className="text-[16px] sm:text-[18px] font-semibold tracking-[-0.01em] text-[var(--gray-12)]">
                     {c.role}
                   </h3>
-                  <p className="mt-1 text-[14px] font-medium text-[var(--gray-9)]">
+                  <p className="mt-1 text-[13px] sm:text-[14px] font-medium text-[var(--gray-9)]">
                     {c.company}
                   </p>
                 </div>
-                <p className="text-[14px] leading-[1.65] text-[var(--gray-8)]">
+                <p className="text-[13px] sm:text-[14px] leading-[1.65] text-[var(--gray-8)]">
                   {c.description}
                 </p>
               </div>
@@ -107,8 +107,8 @@ export function Experience() {
         </motion.div>
 
         {/* Scroll progress indicator */}
-        <div className="mt-8 px-6 lg:pl-[max(1.5rem,calc((100vw-960px)/2))]">
-          <div className="h-px w-[200px] overflow-hidden rounded-full bg-[var(--gray-3)]">
+        <div className="mt-6 sm:mt-8 px-4 sm:px-6 lg:pl-[max(1.5rem,calc((100vw-960px)/2))]">
+          <div className="h-px w-[150px] sm:w-[200px] overflow-hidden rounded-full bg-[var(--gray-3)]">
             <motion.div
               className="h-full rounded-full bg-[var(--gray-7)]"
               style={{

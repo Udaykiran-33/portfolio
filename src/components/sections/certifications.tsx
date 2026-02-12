@@ -44,32 +44,32 @@ const awards = [
 
 export function Certifications() {
   return (
-    <section className="relative w-full py-32 px-6">
-      <div className="mx-auto max-w-[960px] space-y-16">
+    <section className="relative w-full py-24 sm:py-32 px-4 sm:px-6">
+      <div className="mx-auto max-w-[960px] space-y-12 sm:space-y-16">
         {/* Certifications */}
         <div>
           <BlurFade delay={0} inView>
-            <p className="mb-10 text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
+            <p className="mb-8 sm:mb-10 text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
               Certifications
             </p>
           </BlurFade>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 sm:gap-4">
             {certifications.map((item, index) => (
               <BlurFade key={item.title} delay={0.05 + index * 0.05} inView>
-                <div className="rounded-xl bg-[var(--gray-2)] p-5">
+                <div className="rounded-xl bg-[var(--gray-2)] p-4 sm:p-5">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <h3 className="text-[15px] font-semibold tracking-[-0.01em] text-[var(--gray-12)]">
+                    <h3 className="text-[14px] sm:text-[15px] font-semibold tracking-[-0.01em] text-[var(--gray-12)]">
                       {item.title}
                     </h3>
-                    <p className="text-[12px] font-mono text-[var(--gray-6)]">
+                    <p className="text-[11px] sm:text-[12px] font-mono text-[var(--gray-6)]">
                       {item.period}
                     </p>
                   </div>
-                  <p className="mt-1 text-[13px] text-[var(--gray-7)]">
+                  <p className="mt-1 text-[12px] sm:text-[13px] text-[var(--gray-7)]">
                     {item.issuer}
                   </p>
-                  <p className="mt-2 text-[13px] leading-[1.6] text-[var(--gray-8)]">
+                  <p className="mt-2 text-[12px] sm:text-[13px] leading-[1.6] text-[var(--gray-8)]">
                     {item.note}
                   </p>
                 </div>
@@ -81,24 +81,24 @@ export function Certifications() {
         {/* Awards & Leadership */}
         <div>
           <BlurFade delay={0.1} inView>
-            <p className="mb-10 text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
+            <p className="mb-8 sm:mb-10 text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
               Awards & Leadership
             </p>
           </BlurFade>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 sm:gap-4">
             {awards.map((item, index) => (
               <BlurFade key={item.title} delay={0.15 + index * 0.05} inView>
-                <div className="rounded-xl bg-[var(--gray-2)] p-5">
+                <div className="rounded-xl bg-[var(--gray-2)] p-4 sm:p-5">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <h3 className="text-[15px] font-semibold tracking-[-0.01em] text-[var(--gray-12)]">
+                    <h3 className="text-[14px] sm:text-[15px] font-semibold tracking-[-0.01em] text-[var(--gray-12)]">
                       {item.title}
                     </h3>
-                    <p className="text-[12px] font-mono text-[var(--gray-6)]">
+                    <p className="text-[11px] sm:text-[12px] font-mono text-[var(--gray-6)]">
                       {item.period}
                     </p>
                   </div>
-                  <p className="mt-2 text-[13px] leading-[1.6] text-[var(--gray-8)]">
+                  <p className="mt-2 text-[12px] sm:text-[13px] leading-[1.6] text-[var(--gray-8)]">
                     {item.note}
                   </p>
                 </div>
@@ -110,6 +110,7 @@ export function Certifications() {
     </section>
   );
 }
+
 
 
 

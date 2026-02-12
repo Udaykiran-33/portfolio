@@ -17,6 +17,12 @@ export const metadata: Metadata = {
   title: "Uday Kiran Peraboina — MERN Stack Developer",
   description:
     "Portfolio of Uday Kiran Peraboina, MERN stack developer with a focus on AI-powered web applications, accessible education platforms, and farmer-first digital products.",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
 };
 
 export default function RootLayout({

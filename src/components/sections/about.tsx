@@ -11,10 +11,10 @@ const details = [
 
 export function About() {
   return (
-    <section className="relative w-full py-32 px-6">
+    <section className="relative w-full py-24 sm:py-32 px-4 sm:px-6">
       <div className="mx-auto max-w-[640px]">
         <BlurFade delay={0} inView>
-          <p className="text-[clamp(1.125rem,2.5vw,1.375rem)] font-normal leading-[1.6] tracking-[-0.01em] text-[var(--gray-11)]">
+          <p className="text-[clamp(1rem,3.5vw,1.375rem)] font-normal leading-[1.6] tracking-[-0.01em] text-[var(--gray-11)]">
             I&apos;m Uday Kiran, a MERN stack developer who loves turning ideas
             into clean, responsive products that anyone can use &mdash; from
             students learning new skills to farmers managing their fields.
@@ -22,7 +22,7 @@ export function About() {
         </BlurFade>
 
         <BlurFade delay={0.1} inView>
-          <p className="mt-8 text-[15px] leading-[1.7] text-[var(--gray-8)]">
+          <p className="mt-6 sm:mt-8 text-[14px] sm:text-[15px] leading-[1.7] text-[var(--gray-8)]">
             I enjoy building full‑stack web applications with MongoDB,
             Express.js, React.js, and Node.js, and I&apos;m especially excited
             about integrating AI to solve real‑world problems. I take ownership
@@ -32,16 +32,16 @@ export function About() {
         </BlurFade>
 
         <BlurFade delay={0.2} inView>
-          <div className="mt-10 flex flex-col gap-3 border-t border-[var(--gray-3)] pt-6">
+          <div className="mt-8 sm:mt-10 flex flex-col gap-2 sm:gap-3 border-t border-[var(--gray-3)] pt-5 sm:pt-6">
             {details.map((d) => (
               <div
                 key={d.label}
-                className="flex items-center justify-between"
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2"
               >
-                <span className="text-[13px] text-[var(--gray-7)]">
+                <span className="text-[12px] sm:text-[13px] text-[var(--gray-7)]">
                   {d.label}
                 </span>
-                <span className="text-[13px] text-[var(--gray-10)]">
+                <span className="text-[12px] sm:text-[13px] text-[var(--gray-10)]">
                   {d.value}
                 </span>
               </div>

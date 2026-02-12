@@ -82,18 +82,18 @@ export function Testimonials() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-6"
+      className="relative py-20 sm:py-24 px-4 sm:px-6"
     >
-      <div className="mx-auto flex max-w-[960px] flex-col gap-10">
+      <div className="mx-auto flex max-w-[960px] flex-col gap-8 sm:gap-10">
         {testimonials.map((t, i) => (
-          <div key={t.name} className="border-l-2 border-[var(--gray-3)] pl-6">
-            <p className="text-[clamp(1.25rem,3vw,1.5rem)] leading-[1.5] tracking-[-0.01em] text-[var(--gray-11)]">
+          <div key={t.name} className="border-l-2 border-[var(--gray-3)] pl-4 sm:pl-6">
+            <p className="text-[clamp(1.125rem,4vw,1.5rem)] leading-[1.5] tracking-[-0.01em] text-[var(--gray-11)]">
               &ldquo;{t.quote}&rdquo;
             </p>
-            <p className="mt-4 text-[14px] font-medium text-[var(--gray-10)]">
+            <p className="mt-3 sm:mt-4 text-[13px] sm:text-[14px] font-medium text-[var(--gray-10)]">
               {t.name}
             </p>
-            <p className="text-[12px] text-[var(--gray-6)]">{t.role}</p>
+            <p className="text-[11px] sm:text-[12px] text-[var(--gray-6)]">{t.role}</p>
           </div>
         ))}
       </div>

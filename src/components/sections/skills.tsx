@@ -92,13 +92,13 @@ function SkillOrb({
         }}
       />
 
-      <div className="relative z-10 flex flex-col gap-2 p-5">
-        <p className="text-[15px] font-medium text-[var(--gray-12)]">
+      <div className="relative z-10 flex flex-col gap-2 p-4 sm:p-5">
+        <p className="text-[14px] sm:text-[15px] font-medium text-[var(--gray-12)]">
           {skill.name}
         </p>
         <p
           className={cn(
-            "text-[12px] leading-[1.5] text-[var(--gray-7)] transition-all duration-[var(--duration-normal)]",
+            "text-[11px] sm:text-[12px] leading-[1.5] text-[var(--gray-7)] transition-all duration-[var(--duration-normal)]",
             isActive
               ? "max-h-20 opacity-100"
               : "max-h-0 overflow-hidden opacity-0",
@@ -115,23 +115,23 @@ export function Skills() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="relative w-full py-32 px-6">
+    <section className="relative w-full py-24 sm:py-32 px-4 sm:px-6">
       <div className="mx-auto max-w-[960px]">
         <BlurFade delay={0} inView>
-          <p className="mb-12 text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
+          <p className="mb-10 sm:mb-12 text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
             Skills & Stack
           </p>
         </BlurFade>
 
         <BlurFade delay={0.05} inView>
-          <p className="mb-12 max-w-[520px] text-[clamp(1.125rem,2.5vw,1.375rem)] font-normal leading-[1.6] tracking-[-0.01em] text-[var(--gray-11)]">
+          <p className="mb-10 sm:mb-12 max-w-[520px] text-[clamp(1rem,3.5vw,1.375rem)] font-normal leading-[1.6] tracking-[-0.01em] text-[var(--gray-11)]">
             I focus on the MERN stack and modern JavaScript, while actively
             exploring AI and data tools through hackathons, workshops, and
             real projects.
           </p>
         </BlurFade>
 
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4">
           {skills.map((skill, i) => (
             <BlurFade key={skill.name} delay={0.05 + i * 0.04} inView>
               <SkillOrb
